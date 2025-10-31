@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>Typing Speed Test</h2>
+      <div class="muted">
+        Gõ hết đoạn sẽ tự chuyển sang đoạn khác. Nhấn <b>Start</b> để bắt đầu!
+      </div>
+
+      <div style="margin-top: 12px" id="target" class="target"></div>
+
+      <textarea
+        id="input"
+        class="text-area"
+        placeholder="Bấm Start trước khi gõ..."
+        disabled
+        autocomplete="off"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+      ></textarea>
+
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+        <select id="duration">
+          <option value="15">15s</option>
+          <option value="30" selected>30s</option>
+          <option value="60">60s</option>
+        </select>
+        <div id="stats">
+          <div id="timer" class="muted">Time: 30</div>
+          <div id="wpm" class="muted">WPM: 0</div>
+          <div id="accuracy" class="muted">Accuracy: 0%</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
